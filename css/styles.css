@@ -1,0 +1,19 @@
+/* font-family: 'Raleway', sans-serif; */
+
+body{
+    background: #FFFFFF;
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.title{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+.wrapper{
+    max-width: 1354px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
