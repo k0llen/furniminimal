@@ -17,3 +17,81 @@ body{
     padding: 0 15px;
     margin: 0 auto;
 }
+.link:hover{
+    color: #C6B166;
+}
+
+
+/* Header styles start */
+
+
+.header {
+    padding-top: 50px;
+    margin-bottom: 63px;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__menu {
+    display: flex;
+    align-items: center;
+
+}
+.header__logo {
+    text-decoration: none;
+    margin-right: 81px;
+}
+.header__logo-pic {
+}
+.header__nav {
+
+}
+.header__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.header__nav-item {
+    margin-right: 35px;
+}
+
+.header__nav-item:last-child{
+    margin-right: 0;
+}
+.header__nav-link {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    transition: 0.3s all;
+}
+.header__call {
+    display: flex;
+    flex-direction: column;
+
+}
+.header__phone {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    font-family: 'Raleway' sans-serif;
+    display: block;
+    color: #000000;
+    margin-bottom: 4px;
+    text-decoration: none;
+    transition: 0.3s all;
+}
+.header__call-back {
+    color: #C6B166;
+    text-decoration: none;
+    transition: 0.3s;
+    align-self: flex-end;
+}
+
+.header__call-back:hover{
+    border-bottom: 1px solid #C6B166;
+}
+
+/* Header styles end */
