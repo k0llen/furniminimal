@@ -100,6 +100,7 @@ body{
 
 
 .intro {
+    margin-bottom: 160px;
 }
 .intro-wrapper {
     position: relative;
@@ -111,7 +112,29 @@ body{
 }
 .intro__slide {
 }
+.intro__slider-arrows {
+    position: absolute;
+    display: flex;
+    left: 426px;
+    background: #FFFFFF;
+    bottom: -51px;
+}
+.intro__slider-arrow {
+    padding: 0 28px;
+    cursor: pointer;
+}
 
+.intro__slider-arrow path{
+    transition: .3s;
+}
+
+.intro__slider-arrow:hover path{
+    fill: #27302E;
+}
+
+.intro__slider-arrow-right {
+    transform: rotate(180deg);
+}
 .intro__socials {
     position: absolute;
     top: 453px;
