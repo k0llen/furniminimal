@@ -113,14 +113,17 @@ body{
 
 .intro {
     margin-bottom: 160px;
+    padding-bottom: 51px;
 }
 .intro-wrapper {
     position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
 }
 .intro__slider {
-    position: absolute;
-    top: 0;
-    left: 136px;
+    margin-left: 107px;
+    position: relative;
 }
 .intro__slide {
 }
@@ -148,30 +151,32 @@ body{
     transform: rotate(180deg);
 }
 .intro__socials {
-    position: absolute;
-    top: 453px;
+    position: relative;
     left: 7px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .intro__socials-item {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     transition: .3s all;
 }
+
+.intro__socials-item:last-child{
+    margin-bottom: 0;
+}
+
 .intro__socials-item:hover{
     transform: scale(1.1);
 }
 
 .intro__offer{
-    position: relative;
     z-index: 2;
-    top: 86px;
-    left: 564px;
     display: flex;
     flex-wrap: wrap;
-    max-width: 599px;
     flex-direction: column;
+    margin-left: -164px;
+    max-width: 600px;
 }
 
 .intro__text {
@@ -217,7 +222,6 @@ body{
 /* About styles start */
 
 .about{
-    margin-top: 500px;
     margin-bottom: 160px;
 }
 
@@ -268,3 +272,30 @@ body{
 
 
 /* About styles end */
+
+/* Examples styles start */
+
+.examples__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.examples__title {
+}
+
+.examples__insta {
+    color: #C6B166;
+    text-decoration: none;
+    padding-left: 31px;
+    background: url(../svg/inst.svg) no-repeat left center;
+    font-size: 16px;
+    line-height: 22px;
+    transition: all 0.3s ;
+}
+
+.examples__insta:hover{
+    border-bottom: 1px solid #C6B166;
+}
+
+/* examples styles end */
