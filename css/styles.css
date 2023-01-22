@@ -106,6 +106,36 @@ body{
     border-bottom: 1px solid #C6B166;
 }
 
+.header__burger{
+    display: none;
+    width: 40px;
+    height: 28px;
+    position: relative;
+
+}
+
+.burger__line{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+}
+
+.burger__line_1{
+    top: 0;
+}
+
+.burger__line_2{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burger__line_3{
+    bottom: 0;
+}
+
 /* Header styles end */
 
 /* Intro styles start */
@@ -248,13 +278,15 @@ body{
 
 .about__cards {
     display: grid;
-    grid-template-columns: repeat(3, 385px);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 112px;
 }
 .about__card {
+    max-width: 385px;
 }
 .about__card-title-w{
     display: flex;
+    align-items: center;
     margin-bottom: 20px;
 }
 .about__card-pic{
@@ -266,6 +298,7 @@ body{
     line-height: 35px;
     font-family: 'Raleway', sans-serif;
     color: #27302E;
+    max-width: 278px;
 }
 .about__card-desc {
 }
@@ -291,7 +324,7 @@ body{
     background: url(../svg/inst.svg) no-repeat left center;
     font-size: 16px;
     line-height: 22px;
-    transition: all 0.3s ;
+    transition: all 0.3s;
 }
 
 .examples__insta:hover{
@@ -299,3 +332,380 @@ body{
 }
 
 /* examples styles end */
+
+
+/* Media styles start */
+
+@media screen and (max-width:1200px) {
+    .intro__title{
+        font-size: 40px;
+        line-height: 55px;
+    }
+
+    .intro__subtitle{
+        font-size: 16px;
+        line-height: 31px;
+    }
+
+    .intro__button{
+        padding: 29px 32px;
+    }
+}
+
+@media screen and (max-width:1100px){
+    .header__logo{
+        margin-right: 50px;
+    }
+
+    .header__nav-item{
+        margin-right: 25px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .wrapper{
+        max-width: 1054px;
+    }
+    .header__logo{
+        margin-right: 0;
+    }
+
+    .header__burger{
+        display: block;
+    }
+    .header__nav{
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        background-color: #F9F9F9;
+        padding: 120px 20px 20px 20px;
+        transform: translateY(-100%);
+        transition: 0.3s all;
+        max-width: 270px;
+    }
+
+    .header__nav-active{
+        transform: translateY(0);
+    }
+
+    .header__nav-item{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+
+    .header__nav-button{
+        font-size: 40px;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        background: none;
+    }
+
+    .header__nav-button:focus, .header__nav-button:hover, .header__nav-button:active{
+        background: none;
+        border: none;
+    }
+
+
+    .header__nav-close{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 56px;
+        right: 15px;
+        z-index: 11;
+    }
+
+    .header__nav_close-line{
+        width: 100%;
+        height: 2px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        background-color: #000000;
+    }
+
+    .header__nav_close-line:first-child{
+        transform: translateY(-50%) rotate(45deg);
+    }
+    .header__nav_close-line:last-child{
+        transform: translateY(-50%) rotate(-45deg);
+    }
+
+    .body_noscroll{
+        overflow: hidden;
+    }
+
+    .header__call{
+        z-index: 12;
+    }
+    .intro__slider{
+        margin-left: 54px;
+    }
+    .intro__slide{
+        max-width: 450px;
+    }
+
+    .intro__slider-arrows{
+        right: -20%;
+        left: auto;
+    }
+    .intro__text{
+        padding: 30px 0 30px 55px;        
+    }
+
+    .intro__title{
+        font-size: 35px;
+        line-height: 46px;
+        width: 400px;
+    }
+
+    .intro__subtitle{
+        max-width: 400px;
+    }
+
+    .intro__button{
+        font-size: 16px;
+        padding: 29px 30px;
+    }
+
+    .about__cards{
+        column-gap: 50px;
+    }
+
+    .about__card-title{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .about__card-desc{
+        font-size: 14px;
+        line-height: 28px;
+    }
+}
+
+
+
+@media screen and (max-width: 851px) {
+    .wrapper {
+        max-width: 800px;
+    }
+
+    .intro{
+        margin-bottom: 120px;
+    }
+
+    .intro-wrapper{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .intro__socials{
+        flex-direction: row;
+        position: sticky;
+    }
+
+    .intro__socials-item{
+        margin: 0 30px 0 0;
+    }
+
+    .intro__offer{
+        margin: 0 0 60px 0;
+        max-width: none;
+    }
+
+    .intro__text{
+        padding: 0;
+    }
+
+    .intro__title{
+        width: 100%;
+        font-size: 56px;
+        line-height: 75px;
+    }
+
+    .intro__subtitle{
+        max-width: none;
+        width: 100%;
+        font-size: 23px;
+        line-height: 35px;
+    }
+
+    .intro__button{
+        align-self: flex-start;
+    }
+
+    .intro__slider{
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .intro__slide{
+        max-width: none;
+        max-height: 750px;
+    }
+
+    .about__cards{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .about__card{
+        margin-bottom: 40px;
+        max-width: none;
+    }
+
+    .about__card:last-child{
+        margin-bottom: 0;
+    }
+
+    .about__card-title-w{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about__card-pic{
+        margin: 0 0 20px 0;
+    }
+
+    .about__card-title{
+        max-width: none;
+        font-size: 24px;
+        line-height: 35px;
+    }
+
+    .about__card-desc{
+        font-size: 16px;
+        line-height: 31px;
+    }
+
+    .about__descs{
+        max-width: 550px;
+    }
+    .about{
+        margin-bottom: 120px;
+    }
+
+}
+
+
+@media screen and (max-width:768px){
+    .header__nav{
+        width: 100%;
+        height: 100%;
+        max-width: none;
+    }
+
+    .header__logo{
+        z-index: 12;
+
+    }
+
+    .header__nav-link{
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    .header__call {
+        display: none;
+    }
+
+    .intro{
+        padding-bottom: 0;
+        margin-bottom: 45px;
+    }
+
+    .intro__offer {
+        margin-bottom: 0;
+    }
+
+    .intro__title {
+        font-size: 38px;
+        line-height: 160%;
+        max-width: 650px;
+    }
+
+    .intro__subtitle {
+        font-size: 18px;
+        line-height: 165%;
+    }
+
+    .intro__slider{
+        display: none;
+    }
+    .intro__socials {
+        display: none;
+    }
+    .about{
+        margin-bottom: 45px;
+    }
+}
+
+@media screen and (max-width:570px) {
+    .examples__insta{
+        max-width: 180px;   
+    }
+}
+
+@media screen and (max-width:414px){
+    .title{
+        font-size: 25px;
+        line-height: 29px;
+    }
+
+    .intro__text{
+        margin-bottom: 20px;
+    }
+
+    .intro__title{
+        font-size: 30px;
+        line-height: 44px;
+    }
+
+    .intro__subtitle{
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    .intro__button{
+        padding: 22px 55px ;
+    }
+
+    .intro__button span{
+        display: none;
+    }
+
+    .about__title{
+        margin-bottom: 12px;
+    }
+
+    .about__descs{
+        margin-bottom: 25px;
+    }
+
+    .about__desc{
+        font-size: 13px;
+        line-height: 23px;
+        margin-bottom: 12px;
+    }
+
+    .about__card{
+        margin-bottom: 30px;
+    }   
+
+    .about__card-title{
+        font-size: 17px;
+        line-height: 23px
+    }
+
+    .examples__insta{
+        font-size: 12px;
+        line-height: 16px;
+        max-width: 142px;
+    }
+}
+
+/* Media styles end */
