@@ -44,3 +44,33 @@ new Swiper('.intro__slider', {
     speed: 600,
 });
 
+
+new Swiper('.examples__swiper', {
+    rewind: true,
+    slideToClickedSlide: true,
+    spaceBetween: 20,
+    slideToScroll: 1,
+    speed: 600,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+    breakpoints:{
+        1024 : {
+            slidesPerView: 3,
+        },
+
+        768: {
+            slidesPerView: 2.5,
+        },
+
+        414 : {
+            slidesPerView: 1,
+        },
+    },
+});

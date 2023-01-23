@@ -59,7 +59,7 @@ body{
 .header__logo-pic {
 }
 .header__nav {
-
+    overflow: auto;
 }
 .header__nav-list {
     display: flex;
@@ -156,14 +156,15 @@ body{
     margin-left: 107px;
     position: relative;
     max-width: 630px;
+    padding-bottom: 51px;
 }
 .intro__slide {
-    
+    object-fit: contain;
 }
 .intro__slider-arrows {
     position: absolute;
     display: flex;
-    left: 426px;
+    right: 0;
     background: #FFFFFF;
     bottom: 0px;
     z-index: 3;
@@ -312,6 +313,10 @@ body{
 
 /* Examples styles start */
 
+.examples{
+    margin-bottom: 160px;
+}
+
 .examples__top {
     display: flex;
     justify-content: space-between;
@@ -335,6 +340,121 @@ body{
 .examples__insta:hover{
     border-color:#C6B166;
 }
+
+.examples__swiper{
+    padding-bottom: 70px;
+    position: relative;
+}
+
+.examples__swiper-slide {
+    position: relative;
+    max-width: 428px;
+    max-height: 912px;
+}
+
+.examples__slide-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.examples__slide-pic-small{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.examples__slide-cost {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 35px;
+    color: #27302E;
+    padding: 25px 30px;
+    background: #F9F9F9;
+}
+.examples__slide-text {
+    padding: 25px 30px;
+    background:#F9F9F9;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.examples__slide-text-name {
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    color: #27302E;
+    margin-bottom: 7px;
+}
+.examples__slide-text-time {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #6A716F;
+}
+.examples__swiper-slide-2 {
+}
+.examples__swiper-slide-small {
+    position: relative;
+    max-width: 428px;
+    max-height: 446px;
+    margin-bottom: 20px;
+}
+
+.examples__swiper-slide-small:last-child{
+    margin-bottom: 0;
+}
+
+.examples__slider-buttons{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.examples__slider-buttons svg{
+    cursor: pointer;
+}
+
+.examples__slider-buttons div:first-child{
+    margin-right: 20px;
+}
+
+.examples__slider-buttons div:last-child{
+    margin-left: 20px;
+}
+
+.examples__swiper-pagination{
+    display: flex;
+}
+
+.swiper-pagination-bullet{
+    display: block;
+    width: 10px;
+    height: 10px;
+    line-height: 20px;
+    font-size: 14px;
+    background-color: rgba(106, 113, 111, 0.16);
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.swiper-pagination-bullet:last-child{
+    margin-right: 0;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: #D3BE73;
+}
+
 
 /* examples styles end */
 
@@ -447,10 +567,15 @@ body{
     .header__call{
         z-index: 12;
     }
-    /*
+
+    .intro__slider{
+        margin-left: 54px;
+    }
+
     .intro__slide{
-        max-width: 450px;
-    } */
+        width: 100%;
+        height: 100%;
+    } 
     .intro__text{
         padding: 30px 0 30px 55px;        
     }
@@ -486,7 +611,16 @@ body{
 
 }
 
+@media screen and (max-width:992px) {
+    .intro__slider-arrows{
+        right: 0;
+        left: auto;
+    }
 
+    .intro__slider{
+        margin-left: 30px;
+    }
+}
 
 @media screen and (max-width: 851px) {
     .wrapper {
@@ -592,6 +726,25 @@ body{
         margin-bottom: 120px;
     }
 
+    .examples__slide-cost{
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .examples__slide-text{
+        padding: 20px;
+    }
+
+    .examples__slide-text-name{
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .examples__slide-text-time{
+        font-size: 18px;
+        line-height: 19px;
+    }
+
 }
 
 
@@ -645,6 +798,21 @@ body{
     .about{
         margin-bottom: 45px;
     }
+
+    .examples__slide-text{
+        padding: 20px 15px;
+    }
+
+    .examples__slide-text-name{
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .examples__slide-text-time{
+        font-size: 18px;
+        line-height: 19px;
+    }
+
 }
 
 @media screen and (max-width:570px) {
@@ -739,15 +907,17 @@ body{
         line-height: 16px;
         max-width: 142px;
     }
+
+    .examples__slide-pic{
+        max-height: 381px;
+    }
+
+    .examples__slide-text{
+        padding: 20px 15px;
+        bottom: -20px;
+    }
+
 }
 
 /* Media styles end */
 
-/* swiper */
-
-
-.swiper{
-    margin-left: 103px;
-    margin-right: 0;
-    padding-bottom: 51px;
-}
