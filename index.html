@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/swiper.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -87,15 +88,25 @@
                             <img src="./svg/inst.svg" alt="">   
                         </a>
                     </div>
-                    <div class="intro__slider">
-                        <img src="./img/intro-slide-1.jpg" alt="" class="intro__slide">
-                        <div class="intro__slider-arrows">   
-                            <svg class="intro__slider-arrow intro__slider-arrow-left" width="102" height="102" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.292892 7.29289C-0.0976295 7.68342 -0.0976295 8.31658 0.292892 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41422 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292892 7.29289ZM46 7L1 7V9L46 9V7Z" fill="#D3BE73"/>
-                            </svg>
-                            <svg class="intro__slider-arrow intro__slider-arrow-right" width="102" height="102" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.292892 7.29289C-0.0976295 7.68342 -0.0976295 8.31658 0.292892 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41422 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292892 7.29289ZM46 7L1 7V9L46 9V7Z" fill="#D3BE73"/>
-                            </svg>
+                    <div class="intro__slider swiper">
+                        <div class="swiper-wrapper">                            
+                            <div class="swiper-slide">
+                                <img src="./img/intro-slide-1.jpg" alt="" class="intro__slide">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/intro-slide-1.jpg" alt="" class="intro__slide">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/intro-slide-1.jpg" alt="" class="intro__slide">
+                            </div>                           
+                        </div>
+                        <div class="intro__slider-arrows">
+                                <svg class="swiper-button-prev intro__slider-arrow intro__slider-arrow-left" width="102" height="102" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.292892 7.29289C-0.0976295 7.68342 -0.0976295 8.31658 0.292892 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41422 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292892 7.29289ZM46 7L1 7V9L46 9V7Z" fill="#D3BE73"/>
+                                </svg>
+                                <svg class="swiper-button-next intro__slider-arrow intro__slider-arrow-right" width="102" height="102" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.292892 7.29289C-0.0976295 7.68342 -0.0976295 8.31658 0.292892 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41422 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292892 7.29289ZM46 7L1 7V9L46 9V7Z" fill="#D3BE73"/>
+                                </svg>
                         </div>                                     
                     </div>
                     <div class="intro__offer">
@@ -181,6 +192,7 @@
             </div>
         </section>
     </main>
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/scripts.js"></script>
 </body>
 </html>

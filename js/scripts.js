@@ -30,3 +30,17 @@ for (let anchor of anchors) {
     });
 
 }());
+
+// Swiper 
+
+new Swiper('.intro__slider', {
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    spaceBetween: 70,
+    slidesPerView: 1,
+    updateOnWindowResize: true,
+    speed: 600,
+});
+

@@ -144,26 +144,29 @@ body{
 
 .intro {
     margin-bottom: 160px;
-    padding-bottom: 51px;
 }
 .intro-wrapper {
     position: relative;
     display: flex;
     align-items: center;
     margin: 0 auto;
+    min-width: 0;
 }
 .intro__slider {
     margin-left: 107px;
     position: relative;
+    max-width: 630px;
 }
 .intro__slide {
+    
 }
 .intro__slider-arrows {
     position: absolute;
     display: flex;
     left: 426px;
     background: #FFFFFF;
-    bottom: -51px;
+    bottom: 0px;
+    z-index: 3;
 }
 .intro__slider-arrow {
     padding: 0 28px;
@@ -206,7 +209,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-left: -164px;
+    margin-left: -204px;
     max-width: 600px;
 }
 
@@ -382,7 +385,7 @@ body{
         z-index: 10;
         background-color: #F9F9F9;
         padding: 120px 20px 20px 20px;
-        transform: translateY(-100%);
+        transform: translateY(-200%);
         transition: 0.3s all;
         max-width: 270px;
     }
@@ -444,17 +447,10 @@ body{
     .header__call{
         z-index: 12;
     }
-    .intro__slider{
-        margin-left: 54px;
-    }
+    /*
     .intro__slide{
         max-width: 450px;
-    }
-
-    .intro__slider-arrows{
-        right: -20%;
-        left: auto;
-    }
+    } */
     .intro__text{
         padding: 30px 0 30px 55px;        
     }
@@ -487,6 +483,7 @@ body{
         font-size: 14px;
         line-height: 28px;
     }
+
 }
 
 
@@ -549,6 +546,10 @@ body{
         max-width: none;
         max-height: 750px;
     }
+    .intro__slider-arrows{
+        right: 30px;
+        left: auto;
+    } 
 
     .about__cards{
         display: flex;
@@ -741,3 +742,12 @@ body{
 }
 
 /* Media styles end */
+
+/* swiper */
+
+
+.swiper{
+    margin-left: 103px;
+    margin-right: 0;
+    padding-bottom: 51px;
+}
