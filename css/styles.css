@@ -1198,6 +1198,11 @@ body{
         font-size: 12px;
         line-height: 16px;
     }
+
+    .order__title {
+        margin-bottom: 20px;
+    }
+
     .order__cards{
         margin-bottom: 30px;
     }
