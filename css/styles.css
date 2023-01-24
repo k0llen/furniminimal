@@ -441,14 +441,13 @@ body{
 .examples__swiper-pagination{
     display: flex;
 }
-.examples__swiper-button{
-    transition: .3s all;
-}
+
 
 .examples__swiper-button svg{
     fill: #D3BE73;
 }
 .examples__swiper-button:hover svg{
+    transition: .3s all;
     fill: #27302E;
 }
 .swiper-pagination-bullet{
@@ -480,6 +479,134 @@ body{
 
 
 /* examples styles end */
+
+
+/* order styles start */
+
+.order {
+    margin-bottom: 160px;
+}
+
+.order__title {
+    margin-bottom: 40px;
+}
+
+.order__cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 65px;
+}
+.order__card {
+    max-width: 326px;
+
+}
+.order__card-num {
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: #D3BE73;
+    margin-bottom: 15px;
+}
+.order__card-stage {
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 35px;
+    color: #27302E;
+    margin-bottom: 20px;
+}
+.order__card-desc {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 31px;
+    color: #000000;
+}
+.order__card-call {
+    text-decoration: none;
+    font-weight: 600;
+    color: #D3BE73;
+    border-bottom: 1px solid transparent;
+    transition: .3s all;
+}
+
+.order__card-call:hover{
+    border-bottom: 1px solid #C6B166;
+}
+
+.order__form {
+    display: flex;
+    align-items: baseline;
+}
+.order__form-input {
+    border: none;
+    border-bottom: 1px solid #D3BE73;
+    background: none;
+    margin-right: 40px;
+    padding-bottom: 36px;
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: #6A716F;
+    width: 100%;
+    max-width: 260px;    
+}
+
+.order__form-input::placeholder{
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: #6A716F
+}
+
+.order__button-block {
+}
+.order__form-button {
+    padding: 33px 55px;
+    background: none;
+    border: 2px solid #D3BE73;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.11em;
+    color: #27302E;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    transition: .3s all;
+}
+
+.order__form-button:hover{
+    background: #C6B166;
+}
+
+.order__form-agreement {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    max-width: 344px;
+    color: #6A716F;
+}
+.order__form-agreement-link {
+    text-decoration: none;
+    color: #C6B166;
+    transition: .3s all;
+    border-bottom: 1px solid transparent;
+}
+
+.order__form-agreement-link:hover{
+    border-bottom: 1px solid #C6B166;
+}
+
+/* order styles end */
 
 
 /* Media styles start */
@@ -643,9 +770,22 @@ body{
     .intro__slider{
         margin-left: 30px;
     }
+    .order__card{
+        max-width: 267px;   
+    }
+
+    .order__card-stage{
+        font-size: 21px;
+        line-height: 30px;
+    }
+
+    .order__card-desc{
+        font-size: 13px;
+        line-height: 26px;
+    }
 }
 
-@media screen and (max-width: 851px) {
+@media screen and (max-width:851px) {
     .wrapper {
         max-width: 800px;
     }
@@ -749,6 +889,10 @@ body{
         margin-bottom: 120px;
     }
 
+    .examples{
+        margin-bottom: 120px;
+    }
+
     .examples__slide-cost{
         font-size: 20px;
         line-height: 27px;
@@ -768,6 +912,40 @@ body{
         line-height: 19px;
     }
 
+    .order{
+        margin-bottom: 120px;
+    }
+
+    .order__cards{
+        flex-direction: column;
+    }
+
+    .order__card{
+        max-width: none;
+        margin-bottom: 25px;   
+    }
+
+    .order__card:last-child{
+        margin-bottom: 0;
+    }
+
+    .order__card-stage{
+        font-size: 25px;
+        line-height: 38px;
+    }
+
+    .order__card-desc{
+        font-size: 20px;
+        line-height: 37px;
+    }
+
+    .order__form{
+        flex-wrap: wrap;
+    }
+
+    .order__form-button{
+        margin-top: 30px;
+    }
 }
 
 
@@ -836,6 +1014,29 @@ body{
         line-height: 19px;
     }
 
+    .examples{
+        margin-bottom: 45px;
+    }
+
+    .order{
+        margin-bottom: 45px;
+    }
+
+}
+
+@media screen and (max-width:651px){
+    .order__form{
+        flex-direction: column;
+    }
+
+    .order__form-input:first-child{
+        margin-bottom: 30px;
+    }
+
+    .order__form-input{
+        max-width: 350px;
+        margin-right: 0;
+    }
 }
 
 @media screen and (max-width:570px) {
@@ -862,8 +1063,34 @@ body{
         bottom: -20px;
     }
     .examples__slide-pic-small{
-        width: 281px;
         height: 381px;
+    }
+
+    .order__form{
+        align-items: stretch;
+    }
+}
+
+@media screen and (max-width:430px) {
+
+    .order__card {
+        max-width: 360px;
+    }
+    .order__card-num{
+        font-size: 19px;
+        line-height: 22px;
+        margin-bottom: 7px;
+    }
+
+    .order__card-stage{
+        margin-bottom: 12px;
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+    .order__card-desc{
+        font-size: 13px;
+        line-height: 23px;
     }
 }
 
@@ -952,6 +1179,43 @@ body{
         font-size: 12px;
         line-height: 16px;
         max-width: 142px;
+    }
+    
+    .examples__slide-cost{
+        font-size: 16px;
+        line-height: 19px;
+        padding: 20px 15px;
+    }
+
+
+    .examples__slide-text-name{
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 4px;
+    }
+
+    .examples__slide-text-time{
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .order__cards{
+        margin-bottom: 30px;
+    }
+
+    .order__button-block{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .order__form-button{
+        padding: 22px 10%;
+        text-align: center;
+    }
+
+
+    .order__form-input{
+        max-width: none;
+        padding-bottom: 24px;
     }
 
 }

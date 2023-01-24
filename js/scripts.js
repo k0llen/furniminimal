@@ -31,7 +31,7 @@ for (let anchor of anchors) {
 
 }());
 
-// Swiper 
+// Swiper intro
 
 new Swiper('.intro__slider', {
     navigation: {
@@ -44,6 +44,7 @@ new Swiper('.intro__slider', {
     speed: 600,
 });
 
+// Swiper examples
 
 new Swiper('.examples__swiper', {
     rewind: true,
@@ -76,4 +77,11 @@ new Swiper('.examples__swiper', {
             slidesPerView: 1,
         }
     },
+});
+
+// Cleave phone mask
+
+var cleave = new Cleave('.input-phone', {
+    phone: true,
+    phoneRegionCode: '{ru}'
 });
