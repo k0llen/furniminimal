@@ -66,11 +66,14 @@ new Swiper('.examples__swiper', {
         },
 
         768: {
-            slidesPerView: 2.5,
+            slidesPerView: 2,
         },
 
         414 : {
-            slidesPerView: 1,
+            slidesPerView: 1.5,
         },
+        320 :{
+            slidesPerView: 1,
+        }
     },
 });
