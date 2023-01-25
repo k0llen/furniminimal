@@ -79,9 +79,40 @@ new Swiper('.examples__swiper', {
     },
 });
 
-// Cleave phone mask
+// Review slider
 
-var cleave = new Cleave('.input-phone', {
-    phone: true,
-    phoneRegionCode: '{ru}'
+
+new Swiper('.review__swiper', {
+    rewind: true,
+    slideToClickedSlide: true,
+    spaceBetween: 20,
+    slideToScroll: 1,
+    speed: 600,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+    breakpoints:{
+        414 : {
+            slidesPerView: 2,
+        },
+        320 :{
+            slidesPerView: 1,
+        }
+    },
 });
+
+// MaskedInput phone mask
+
+jQuery(function($){
+    $("#phone-1").mask("+7 (999) 999-99-99");
+ });
+
+ jQuery(function($){
+    $("#phone-2").mask("+7 (999) 999-99-99");
+ });
