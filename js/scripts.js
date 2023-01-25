@@ -98,8 +98,14 @@ new Swiper('.review__swiper', {
       clickable: true,
     },
     breakpoints:{
-        414 : {
+        1024:{
             slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 1.5,
+        },
+        414:{
+            slidesPerView: 1.2,
         },
         320 :{
             slidesPerView: 1,

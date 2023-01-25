@@ -807,11 +807,14 @@ em{
     background: url(../svg/inst.svg) no-repeat left center;
     transition: .3s all;
     border-bottom: 1px solid transparent;
+    font-size: 16px;
+    line-height: 22px;
 }
 
-.review__slide-vk:hover{
+.review__slide-inst:hover{
     border-color: #C6B166;
 }
+
 .review__slide-vk {
     text-decoration: none;
     color: #C6B166;
@@ -819,11 +822,15 @@ em{
     background: url(../svg/vk.svg) no-repeat left center;
     transition: .3s all;
     border-bottom: 1px solid transparent;
+    font-size: 16px;
+    line-height: 22px;
 }
 
-.review__slide-inst:hover{
+.review__slide-vk:hover{
     border-color: #C6B166;
 }
+
+
 
 
 .review__slide-text span{
@@ -873,6 +880,60 @@ em{
 
 /* Review styles end */
 
+/* Faq styles start */
+
+.faq {
+    margin-bottom: 160px;
+}
+.faq__wrapper {
+    margin-left: 298px;
+}
+.faq__title {
+}
+.faq__pic {
+    z-index: 1;
+}
+.faq__block{
+    display: flex;
+    align-items: center;
+}
+.faq__accordeon {
+    max-width: 1042px;
+    width: 100%;
+    margin-right: -211px;
+}
+.faq__accordeon-item {
+    padding: 45px 55px;
+    position: relative;
+    background: #FFFFFF;
+    margin-bottom: 7px;
+    z-index: 2;
+}
+
+.faq__accordeon-item:last-child{
+    margin-bottom: 0;
+}
+
+.faq__accordeon-item-title {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: #27302E;
+}
+.faq__accordeon-item-desc {
+    max-height: 0;
+    overflow: hidden;
+}
+.faq__accordeon-item-btn {
+    position: absolute;
+    right: 55px;
+    top: 45px;
+}
+
+/* Faq styles end */
+
 /* Media styles start */
 
 @media screen and (max-width:1200px) {
@@ -910,6 +971,10 @@ em{
     
     .for__desc {
         font-size: 13px;
+    }
+    .review__slide-text{
+        font-size: 15px;
+        line-height: 29px;
     }
 
 }
@@ -1363,6 +1428,10 @@ em{
         margin-bottom: 45px;
     }
 
+    .review__slide-top{
+        margin-bottom: 15px;
+    }
+
 }
 
 @media screen and (max-width:651px){
@@ -1396,6 +1465,9 @@ em{
 @media screen and (max-width:570px) {
     .examples__insta{
         max-width: 180px;   
+    }
+    .review__swiper-slide{
+        padding: 25px;
     }
 }
 
@@ -1638,6 +1710,33 @@ em{
 
     .free__form-input:first-child{
         margin-bottom: 25px;
+    }
+
+    .review__swiper-slide{
+        padding: 20px 15px;
+        height: 294px !important;
+    }
+
+    .review__slide-name{
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 5px;
+    }
+
+    .review__slide-inst{
+        font-size: 14px;
+        line-height: 101%;
+        background-size: 18px 18px;
+    }
+
+    .review__slide-vk{
+        font-size: 14px;
+        line-height: 101%;
+    }
+
+    .review__slide-text{
+        font-size: 13px;
+        line-height: 23px;
     }
 }
 
