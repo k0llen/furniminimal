@@ -113,6 +113,7 @@ new Swiper('.review__swiper', {
     },
 });
 
+ 
 // MaskedInput phone mask
 
 jQuery(function($){
@@ -122,3 +123,20 @@ jQuery(function($){
  jQuery(function($){
     $("#phone-2").mask("+7 (999) 999-99-99");
  });
+
+ // Accordeon
+
+ document.querySelectorAll('.faq__accordeon-item-btn').forEach((item) => {
+    item.addEventListener('click', () => {
+        const parent = item.parentNode;
+
+        if (parent.classList.contains('faq__accordeon-item--active')) {
+            parent.classList.remove('faq__accordeon-item--active');
+        } else {
+            document.querySelectorAll('.faq__accordeon-item').forEach((child) => {
+                child.classList.remove('faq__accordeon-item--active');
+            })
+            parent.classList.add('faq__accordeon-item--active');
+        }
+    })
+ })
