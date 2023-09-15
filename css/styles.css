@@ -929,6 +929,21 @@ em{
     font-size: 24px;
     line-height: 28px;
     color: #27302E;
+    padding: 45px 55px;
+    margin: -45px -55px;
+    position: relative;
+    cursor: pointer;
+}
+
+.faq__accordeon-item-title::before {
+    content: '';
+    position: absolute;
+    right: 55px;
+    top: 45px;
+    width: 40px;
+    height: 40px;
+    transition: .3s all;
+    background: url(../svg/plus.svg) no-repeat center center;
 }
 .faq__accordeon-item-desc {
     max-height: 0;
@@ -942,17 +957,8 @@ em{
     margin-top: 30px;
 }
 
-.faq__accordeon-item--active .faq__accordeon-item-btn{
+.faq__accordeon-item--active .faq__accordeon-item-title::before{
     transform: rotate(45deg);
-}
-
-.faq__accordeon-item-btn {
-    position: absolute;
-    right: 55px;
-    top: 45px;
-    transition: .3s all;
-    width: 40px;
-    height: 40px;
 }
 
 /* Faq styles end */

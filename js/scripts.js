@@ -37,7 +37,7 @@ new Swiper('.intro__slider', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
+    },
     spaceBetween: 70,
     slidesPerView: 1,
     updateOnWindowResize: true,
@@ -57,9 +57,9 @@ new Swiper('.examples__swiper', {
         prevEl: '.swiper-button-prev',
     },
     pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
     },
     breakpoints:{
         1024 : {
@@ -93,9 +93,9 @@ new Swiper('.review__swiper', {
         prevEl: '.swiper-button-prev',
     },
     pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
     },
     breakpoints:{
         1024:{
@@ -113,20 +113,20 @@ new Swiper('.review__swiper', {
     },
 });
 
- 
+
 // MaskedInput phone mask
 
 jQuery(function($){
     $("#phone-1").mask("+7 (999) 999-99-99");
- });
+});
 
- jQuery(function($){
+jQuery(function($){
     $("#phone-2").mask("+7 (999) 999-99-99");
- });
+});
 
  // Accordeon
 
- document.querySelectorAll('.faq__accordeon-item-btn').forEach((item) => {
+document.querySelectorAll('.faq__accordeon-item-title').forEach((item) => {
     item.addEventListener('click', () => {
         const parent = item.parentNode;
 
@@ -139,4 +139,4 @@ jQuery(function($){
             parent.classList.add('faq__accordeon-item--active');
         }
     })
- })
+})
