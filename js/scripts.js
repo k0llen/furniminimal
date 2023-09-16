@@ -140,3 +140,37 @@ document.querySelectorAll('.faq__accordeon-item-title').forEach((item) => {
         }
     })
 })
+
+// ymaps
+
+//[59.85268619220522,30.319771570168733]
+
+ymaps.ready(init);
+
+function init() {
+	let map = new ymaps.Map('map', {
+		center: [59.85268619220522,30.319771570168733],
+		zoom: 15
+	});
+
+	let placemark = new ymaps.Placemark([59.85268619220522,30.319771570168733], {
+        balloonContentBody: `г. Санкт-Петербург, </br>
+                            Ленинский пр-т, д. 206`,
+
+    }, {
+		iconLayout: 'default#image',
+		iconImageHref: 'img/placemark.svg',
+		iconImageSize: [90, 90],
+		iconImageOffset: [-45, -45]
+	});
+
+	map.controls.remove('geolocationControl');
+    map.controls.remove('searchControl');
+    map.controls.remove('trafficControl');
+    map.controls.remove('typeSelector');
+    map.controls.remove('fullscreenControl');
+    map.controls.remove('zoomControl');
+    map.controls.remove('rulerControl');
+
+	map.geoObjects.add(placemark).add(placemark2).add(placemark3).add(placemark4).add(placemark5);
+}
